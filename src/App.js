@@ -1,19 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
 
 import CardComponentB from './components/CardComponent/CardComponentB'
 import Navv from './components/Navv/Navv'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
+
 function App() {
+  const [number, setNumber] = useState(1);
+  const handdleIncrement = () => {
+    setNumber(number + 1);
+  }
+  const handdleDecrement = () => {
+    if (number <= 0) {
+      setNumber(0);
+   }
+   else
+    setNumber(number - 1);
+
+  }
+
+
   return (
-    
     <div>
     <Navv brandname={" Nico ecommerce"} categoriauno={"Comida"} categoriados={"Tecnologia"} categoriatres={"Deporte"} categoriacuatro={"Servicios"}/>
     <div>
       <div>
         <ItemListContainer greeting={"¡Bienvenido!"} />
+        
+        <div className="estado">{number}</div>
       </div>
+      <div className="cards-container">
+        
+        
+        <button className="buttonstate" onClick={handdleIncrement}>+</button>
+        <button className="buttonstate" onClick={handdleDecrement}>-</button>
+        
+        
+        </div>
+        
+
     <div className="cards-container">
       
       
@@ -24,6 +51,7 @@ function App() {
 </div>
       
           </div>
+          
   </div>
       
   );
