@@ -1,0 +1,13 @@
+.estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-bottom: -15px;
+  }
+
+.contieneboton {
+display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
