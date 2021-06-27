@@ -42,9 +42,12 @@ const ItemCount = () => {
                 Cantidad: {number}      -    Stock: {stock}                           
             </div>
             
+        
             <div className="contieneboton">
                 <button className="buttonstate" onClick={handdleDecrement}>-</button>
                 <button className="buttonstate" onClick={handdleIncrement}>+</button>
+            </div>
+            <div className="contienebotoncarrito">
                 <button className="buttoncart" onClick={hannddleAddCart}>Agregar al carrito</button>
             </div>
             
