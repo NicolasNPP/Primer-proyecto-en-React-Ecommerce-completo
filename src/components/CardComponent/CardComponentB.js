@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import ItemCount from '../ItemCount/ItemCount'
 
 const CardComponentB = ({ name, price, description, img }) => (
     <Card style={{ width: '18rem' }}>
@@ -12,7 +13,7 @@ const CardComponentB = ({ name, price, description, img }) => (
     <Card.Text>
       {description}
     </Card.Text>
-    <Button variant="primary">Agregar al carrito</Button>
+    <ItemCount/>  
   </Card.Body>
 </Card>
   )

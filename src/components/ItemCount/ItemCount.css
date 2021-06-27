@@ -11,3 +11,26 @@ display: flex;
   justify-content: center;
   margin-top: 20px;
 }
+
+.buttonstate {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border-radius: 2000px;
+    margin: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+    
+    border-color: transparent;
+    }
+
+.buttoncart {
+    background-color: rgb(81, 162, 81);
+    color: white;
+    border-radius: 2000px;
+    margin: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+    
+    border-color: transparent;
+
+}

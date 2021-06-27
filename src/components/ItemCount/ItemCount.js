@@ -39,12 +39,12 @@ const ItemCount = () => {
     return(
         <div>
             <div className="estado">
-                {number}                            
+                Cantidad: {number}      -    Disponibles: {stock}                           
             </div>
             <div className="contieneboton">
-                <button className="buttonstate" onClick={handdleIncrement}>+</button>
                 <button className="buttonstate" onClick={handdleDecrement}>-</button>
-                <button className="buttonstate" onClick={hannddleAddCart}>Agregar al carrito</button>
+                <button className="buttonstate" onClick={handdleIncrement}>+</button>
+                <button className="buttoncart" onClick={hannddleAddCart}>Agregar al carrito</button>
             </div>
             
             
