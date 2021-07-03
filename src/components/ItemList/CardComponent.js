@@ -13,7 +13,7 @@ const CardComponent = ({ img, name, date, description }) => (
         {description}
       </Card.Description>
     </Card.Content>
-  
+
   </Card>
 )
 

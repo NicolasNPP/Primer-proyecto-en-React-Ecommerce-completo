@@ -4,7 +4,7 @@ import './cart.css';
 
 
 const CartWidget = () => (
-  <img className="cart" src={cartimage}/>
-  )
+  <img className="cart" src={cartimage} />
+)
 
 export default CartWidget
