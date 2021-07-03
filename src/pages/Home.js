@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Item from '../components/Item/Item';
-import Navv from '../components/Navv/Navv';
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-import ItemCount from '../components/ItemCount/ItemCount';
-import { ItemList } from "../Data/ItemList";
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Container'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Carrousel from '../components/Carrousel/Carrousel';
+import Saludo from '../components/Saludo/Saludo';
 import axios from 'axios';
 
 
@@ -34,7 +26,7 @@ setItems(res.data)
       <div>
         
 
-        <ItemListContainer greeting={"¡Hola! Compra tu personaje favorito."} />
+        <Saludo greeting={"¡Hola! Compra tu personaje favorito."} />
           
           
         
