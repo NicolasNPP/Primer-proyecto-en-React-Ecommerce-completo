@@ -23,7 +23,7 @@ setA(res.data)
       <div className="row">
         
 {a.map(function(num){
-     return <div className="col-md-3" key={num.char_id}><Link to={`/detail/${num.char_id}`}><Item name={num.name} price={num.category} description={num.description} img={num.img}/></Link></div>
+     return <div className="col-md-3" key={num.char_id}><Item name={num.name} price={num.category} description={num.description} id={num.char_id} img={num.img}/></div>
     
   })}
 

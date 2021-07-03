@@ -4,11 +4,11 @@ import ItemCount from '../ItemCount/ItemCount'
 import './Item.css';
 import { Link } from 'react-router-dom';
 
-const Item = ({ name, price, description, category, img }) => (
-    <Card className="tarjeta">
-  <Card.Img variant="top" src={img} className="imgtamaño"/>
+const Item = ({ name, price, description, category, img, id }) => (
+  <Card className="tarjeta">
+  <Link to={`/detail/${id}`}>  <Card.Img variant="top" src={img} className="imgtamaño"/> </Link>
   <Card.Body className="cuerpocard">
-    <Card.Title>{name}</Card.Title>
+  <Link to={`/detail/${id}`}><Card.Title>{name}</Card.Title></Link>
     <Card.Text>
       {category}
     </Card.Text>
