@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ItemList from '../ItemList/ItemList';
 
-
-
-
-
 const AllCat = () => { 
     const [items, setItems] = useState([]);
 
