@@ -24,7 +24,7 @@ const ItemDetail = ({ match }) => {
         <div className="container">
             <div className="row">
                 {a.map(function (num) {
-                    return <div className="col-md-3" key={num.char_id}><Item img={num.img} /></div>
+                    return <div className="col-md-3" key={num.char_id}><Item img={num.img} id={num.char_id} /></div>
 
                 })}
 
