@@ -24,17 +24,17 @@ const ItemCount = () => {
       }
 
       const hannddleAddCart = () => {
-        if (number <= stock && number > 0 ) {
-            alert(`Agregaste ${number} productos al carrito`)
-         }
-         else if (number >= stock) {
-         alert(`Solo puedes agregar hasta ${stock} productos por falta de stock`)
+          if (number <= stock && number > 0 ) {
+              alert(`Agregaste ${number} productos al carrito`)
+          }
+          else if (number >= stock) {
+          alert(`Solo puedes agregar hasta ${stock} productos por falta de stock`)
+          }
+          else 
+          alert(`Debes agregar al menos un producto a tu carrito`)
+
+
         }
-        else 
-        alert(`Debes agregar al menos un producto a tu carrito`)
-
-
-      }
 
     return(
         <div>
