@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import ItemList from '../ItemList/ItemList';
+import Saludo from '../Saludo/Saludo';
+import axios from 'axios';
 
 
-
-
-
-const AllCat = () => { 
+const ItemListContainer = () => { 
     const [items, setItems] = useState([]);
 
 
     useEffect(() => {
-      axios("https://breakingbadapi.com/api/characters").then((res) => 
+      axios("https://breakingbadapi.com/api/characters?limit=180&offset=10").then((res) => 
 setItems(res.data)
       );
         
@@ -27,6 +25,8 @@ setItems(res.data)
       
       <div>
         
+
+        <Saludo greeting={"¡Hola! Compra tu personaje favorito."} />
           
           
         
@@ -57,4 +57,5 @@ setItems(res.data)
     );
 }
 
-export default AllCat
+
+export default ItemListContainer

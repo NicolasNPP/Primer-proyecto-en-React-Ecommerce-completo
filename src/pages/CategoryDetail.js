@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import Item from '../components/Item/Item';
+import Item from '../components/ItemList/ItemList';
 
 
 
