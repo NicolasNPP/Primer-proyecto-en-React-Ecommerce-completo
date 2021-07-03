@@ -1,7 +1,8 @@
-import React from 'react'
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
-import CartWidget from '../CartWidget/CartWidget.js'
-import brand from './brand.png'
+import React from 'react';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import CartWidget from '../CartWidget/CartWidget.js';
+import brand from './brand.png';
+import { Link } from 'react-router-dom';
 
 const Navv = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => (
 <Navbar bg="light" expand="lg">
@@ -15,7 +16,8 @@ const Navv = ({ brandname, categoriauno, categoriados, categoriatres, categoriac
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Inicio</Nav.Link>
+      <Nav.Link href="/">Inicio</Nav.Link>
+      <Nav.Link href="/services">Servicios</Nav.Link>
       
       <NavDropdown title="Categorias" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">{categoriauno}</NavDropdown.Item>
@@ -24,6 +26,9 @@ const Navv = ({ brandname, categoriauno, categoriados, categoriatres, categoriac
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">{categoriacuatro}</NavDropdown.Item>
       </NavDropdown>
+      
+      <Nav.Link href="/contact">Contacto</Nav.Link>
+      
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="¿Que quieres comprar?" className="mr-sm-2" />

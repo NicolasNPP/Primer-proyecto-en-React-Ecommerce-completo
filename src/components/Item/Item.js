@@ -4,9 +4,9 @@ import ItemCount from '../ItemCount/ItemCount'
 import './Item.css';
 
 const Item = ({ name, price, description, img }) => (
-    <Card>
-  <Card.Img variant="top" src={img} classNamae="imgtamaño"/>
-  <Card.Body>
+    <Card className="tarjeta">
+  <Card.Img variant="top" src={img} className="imgtamaño"/>
+  <Card.Body className="cuerpocard">
     <Card.Title>{name}</Card.Title>
     <Card.Text>
       {price}

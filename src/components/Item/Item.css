@@ -1,5 +1,14 @@
 .imgtamaño {
-    width: 6230px;
-    height: 380px;
+    width: 500px;
+    height: 340px;
     background-size: cover;
+}
+
+.tarjeta {
+    margin-top: 15px;
+    
+}
+
+.cuerpocard {
+    height: 270px;
 }

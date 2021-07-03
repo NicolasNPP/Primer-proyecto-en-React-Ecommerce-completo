@@ -9,60 +9,37 @@ import { ItemList } from "./Data/ItemList";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Container'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import ItemDetail from './pages/ItemDetail';
+
+
 
 
 
 function App() {
-
-  const [items, setItems] = useState([]);
-
-
-  useEffect(() => {
-    fetch("https://breakingbadapi.com/api/characters?limit=180&offset=10")
-      .then((response) => response.json())
-      .then((json) => setItems(json));
-      
-  });
-
- 
- 
-  return (
-    
-    <div>
-    <Navv brandname={" Nico ecommerce"} categoriauno={"Comida"} categoriados={"Tecnologia"} categoriatres={"Deporte"} categoriacuatro={"Servicios"}/>
-    
-    <div>
-      
-      
-        <ItemListContainer greeting={"¡Bienvenido!"} />
-        
-        
-      
-      
+return(
+<div>
 
 
-    <div>
-      
 
+<Router>
+<div className="App">
+<Navv brandname={" Nico ecommerce"} categoriauno={"Comida"} categoriados={"Tecnologia"} categoriatres={"Deporte"} categoriacuatro={"Servicios"}/>
+<Switch>
+  <Route exact path="/" component={Home} />
+  <Route path="/contact" component={Contact} />
+  <Route path="/services" component={Services} />
+  <Route path="/detail/:id" component={ItemDetail} />
 
-  <div className="container-fluid">
-    <div className="row">
-      
-{items.map(function(num){
-   return <div className="col-md-3"><Item name={num.name} price={num.category} description={num.description} img={num.img}/></div>
-  
-})}      
-    
-    </div>
- </div>
- 
+</Switch>
 </div>
-      
-          </div>
-          
-  </div>
-      
-  );
+
+</Router>
+</div>
+    )
 }
 
 export default App;
