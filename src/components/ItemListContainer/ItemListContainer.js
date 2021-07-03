@@ -24,7 +24,7 @@ const ItemListContainer = () => {
       <div>
 
 
-        <Saludo greeting={"¡Hola! Compra tu personaje favorito."} />
+        <Saludo greeting={"Compra un curso de actuacion con con tu personaje favorito."} />
 
 
 

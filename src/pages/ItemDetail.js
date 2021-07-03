@@ -53,9 +53,9 @@ const ItemDetail = ({ match }) => {
                     return <div className="col-md-9" key={num.char_id}>
                         <h1>{num.name}</h1>
 
-                        <Link to={`/category/${hh}`}><h3>{num.category}</h3></Link>
+                        <h3>Categoria: <Link to={`/category/${hh}`}>{num.category}</Link></h3>
                         <h4>Precio: ${num.char_id} </h4>
-                        <p> {num.name}, actuo en: {num.category}, en donde era llamado como {num.nickname}. Puedes comprar a {num.nickname} por solamente ${num.char_id}  </p>
+                        <p><b>Descripcion:</b> {num.name}, actuo en: {num.category}, en donde era llamado como {num.nickname}. Puedes comprar un curso de actuacion con {num.nickname} por solamente ${num.char_id}  </p>
                     </div>
 
                 })}
