@@ -1,7 +1,12 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Saludo from '../Saludo/Saludo';
 import axios from 'axios'
+import Loading from '../Loading/Loading';
 const ItemList = lazy(() => import('../ItemList/ItemList'));
+
+
+
+
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -26,7 +31,7 @@ const ItemListContainer = () => {
       <div>
 
 
-        <Saludo greeting={"Compra un curso de actuacion con con tu personaje favorito."} />
+        <Suspense fallback={<div><Loading /></div>}><Saludo greeting={"Compra un curso de actuacion con con tu personaje favorito."} /></Suspense>
 
 
 
@@ -41,7 +46,7 @@ const ItemListContainer = () => {
             <div className="row">
 
               {items.map(function (num) {
-                return <div className="col-md-3" key={num.char_id}><Suspense fallback={<h3>Cargando</h3>}><ItemList name={num.name} price={`$${num.char_id}`} category={num.category} description={num.description} id={num.char_id} img={num.img} /></Suspense></div>
+                return <div className="col-md-3" key={num.char_id}><Suspense fallback={<div><Loading /></div>}><ItemList name={num.name} price={`$${num.char_id}`} category={num.category} description={num.description} id={num.char_id} img={num.img} /></Suspense></div>
 
               })}
 
