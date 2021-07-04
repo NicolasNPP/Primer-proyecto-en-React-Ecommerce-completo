@@ -8,6 +8,7 @@ import CategoryDetail from './pages/CategoryDetail';
 import AllCat from './components/AllCat/AllCat';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
+
 function App() {
   return (
     <div>

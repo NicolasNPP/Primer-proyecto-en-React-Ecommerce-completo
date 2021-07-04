@@ -4,6 +4,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemList.css';
 import { Link } from 'react-router-dom';
 
+
 const Item = ({ name, price, description, category, img, id }) => (
   <Card className="tarjeta">
     <Link to={`/detail/${id}`}>  <Card.Img variant="top" src={img} className="imgtamaño" /> </Link>
