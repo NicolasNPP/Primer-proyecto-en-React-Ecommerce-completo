@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Navv from './components/Navv/Navv';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contact from './pages/Contact';

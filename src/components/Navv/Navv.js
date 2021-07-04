@@ -2,12 +2,10 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget.js';
 import brand from './brand.png';
-import { Link } from 'react-router-dom';
 
 const Navv = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => {
   let linkuno = "Better+Call+Saul";
   let linkdos = "Breaking+Bad";
-  let linktres = "=";
 
   return (
     <Navbar bg="light" expand="lg">
