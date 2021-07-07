@@ -1,11 +1,12 @@
 import React from 'react';
 import { Spinner } from 'reactstrap';
 import './Loading.css'
+import './Cargando.css'
 
 function Loading() {
     return (
-        <div>
-            <Spinner color="dark" />
+        <div className="cargando">
+            <Spinner color="dark" className="cargandodos" />
         </div>
     )
 }

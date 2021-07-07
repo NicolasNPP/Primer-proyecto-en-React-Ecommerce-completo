@@ -4,7 +4,6 @@ const ItemListContainer = lazy(() => import('../components/ItemListContainer/Ite
 
 function Home() {
   return (
-
     <Suspense fallback={<Loading />}><ItemListContainer /></Suspense>
   )
 }

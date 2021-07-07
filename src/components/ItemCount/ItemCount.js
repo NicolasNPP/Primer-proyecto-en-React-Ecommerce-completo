@@ -13,7 +13,6 @@ const ItemCount = () => {
             setNumber(stock);
     }
 
-
     const handdleDecrement = () => {
         if (number <= 0) {
             setNumber(0);
@@ -33,7 +32,6 @@ const ItemCount = () => {
         else
             alert(`Debes agregar al menos un producto a tu carrito`)
 
-
     }
 
     return (
@@ -42,7 +40,6 @@ const ItemCount = () => {
                 Cantidad: {number}      -    Stock: {stock}
             </div>
 
-
             <div className="contieneboton">
                 <button className="buttonstate" onClick={handdleDecrement}>-</button>
                 <button className="buttonstate" onClick={handdleIncrement}>+</button>
@@ -50,9 +47,6 @@ const ItemCount = () => {
             <div className="contienebotoncarrito">
                 <button className="buttoncart" onClick={hannddleAddCart}>Agregar al carrito</button>
             </div>
-
-
-
         </div>
     )
 }

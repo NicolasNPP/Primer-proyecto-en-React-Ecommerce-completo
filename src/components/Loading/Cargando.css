@@ -1,0 +1,15 @@
+.cargando {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+   
+    height: 400px;
+}
+.cargandodos {
+display: block;
+position: absolute;
+left: 50%;
+top: 50%;
+    
+}

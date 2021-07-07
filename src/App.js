@@ -7,13 +7,9 @@ import CategoryDetail from './pages/CategoryDetail';
 import AllCat from './components/AllCat/AllCat';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
-
 function App() {
   return (
     <div>
-
-
-
       <Router>
         <div className="App">
           <Navv brandname={" Nico ecommerce"} categoriauno={"Personajes de Better Call Saul"} categoriados={"Personajes de Breaking Bad"} categoriacuatro={"Catalogo completo"} />
@@ -24,12 +20,8 @@ function App() {
             <Route path="/detail/:id" component={ItemDetail} />
             <Route path="/category/breaking+bad+bettercallsaul" component={AllCat} />
             <Route path="/category/:id" component={CategoryDetail} />
-
-
-
           </Switch>
         </div>
-
       </Router>
     </div>
   )

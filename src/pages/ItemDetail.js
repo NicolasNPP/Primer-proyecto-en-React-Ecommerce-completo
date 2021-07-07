@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import Item from '../components/ItemList/ItemList';
 import './ItemDetail.css';
 
-
-
 const ItemDetail = ({ match }) => {
     let itemID = match.params.id;
     const [a, setA] = useState([]);
@@ -14,11 +12,7 @@ const ItemDetail = ({ match }) => {
         axios(`https://breakingbadapi.com/api/characters/${itemID}`).then((res) =>
             setA(res.data)
         );
-
-        //console.log(a[0]);
-
     });
-
 
     return (
         <div className="container">
@@ -43,13 +37,6 @@ const ItemDetail = ({ match }) => {
                     }
 
                     n()
-
-
-
-                    //let x = num.category.replace(/ /g, "+");
-
-
-
                     return <div className="col-md-9" key={num.char_id}>
                         <h1>{num.name}</h1>
 
@@ -59,9 +46,6 @@ const ItemDetail = ({ match }) => {
                     </div>
 
                 })}
-
-
-
             </div>
         </div>
     );
