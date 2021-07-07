@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Item from '../components/ItemList/ItemList';
+import Item from '../components/Item/Item';
 import './ItemDetail.css';
 
 const ItemDetail = ({ match }) => {

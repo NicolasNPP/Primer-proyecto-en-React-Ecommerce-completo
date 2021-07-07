@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ItemList from '../ItemList/ItemList';
+import ItemList from '../Item/Item';
 
 const AllCat = () => {
   const [items, setItems] = useState([]);

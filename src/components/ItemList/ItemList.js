@@ -1,26 +1,25 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import ItemCount from '../ItemCount/ItemCount'
-import './ItemList.css';
-import { Link } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import Loading from '../Loading/Loading';
+const Item = lazy(() => import('../Item/Item'));
 
-const Item = ({ name, price, description, category, img, id }) => (
-  <Card className="tarjeta">
-    <Link to={`/detail/${id}`}>  <Card.Img variant="top" src={img} className="imgtamaño" /> </Link>
-    <Card.Body className="cuerpocard">
-      <Link to={`/detail/${id}`}><Card.Title>{name}</Card.Title></Link>
-      <Card.Text>
-        {category}
-      </Card.Text>
-      <Card.Text>
-        {price}
-      </Card.Text>
-      <Card.Text>
-        {description}
-      </Card.Text>
-      <ItemCount />
-    </Card.Body>
-  </Card>
-)
 
-export default Item
+const ItemList = ({ data }) => {
+    return (
+        <div>
+
+            <div className="container">
+                <div className="row">
+                    {data.map(function (num) {
+                        return <div className="col-md-3" key={num.char_id}><Suspense fallback={<div><Loading /></div>}><Item name={num.name} price={num.category} description={num.description} id={num.char_id} img={num.img} /></Suspense></div>
+
+                    })}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+
+
+export default ItemList;

@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import Item from '../components/ItemList/ItemList';
+import Item from '../components/Item/Item';
 
 const CategoryDetail = ({ match }) => {
-  let itemID = match.params.id;
+  const itemID = match.params.id;
   const [a, setA] = useState([]);
 
   useEffect(() => {

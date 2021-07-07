@@ -1,4 +1,4 @@
-import Navv from './components/Navv/Navv';
+import Navegacion from './components/Navegacion/Navegacion';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
@@ -12,7 +12,7 @@ function App() {
     <div>
       <Router>
         <div className="App">
-          <Navv brandname={" Nico ecommerce"} categoriauno={"Personajes de Better Call Saul"} categoriados={"Personajes de Breaking Bad"} categoriacuatro={"Catalogo completo"} />
+          <Navegacion brandname={" Nico ecommerce"} categoriauno={"Personajes de Better Call Saul"} categoriados={"Personajes de Breaking Bad"} categoriacuatro={"Catalogo completo"} />
           <Switch>
             <Route exact path="/" component={ItemListContainer} />
             <Route path="/contact" component={Contact} />

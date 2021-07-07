@@ -3,9 +3,9 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-boots
 import CartWidget from '../CartWidget/CartWidget.js';
 import brand from './brand.png';
 
-const Navv = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => {
-  let linkuno = "Better+Call+Saul";
-  let linkdos = "Breaking+Bad";
+const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => {
+  const linkuno = "Better+Call+Saul";
+  const linkdos = "Breaking+Bad";
 
   return (
     <Navbar bg="light" expand="lg">
@@ -43,4 +43,4 @@ const Navv = ({ brandname, categoriauno, categoriados, categoriatres, categoriac
   )
 }
 
-export default Navv
+export default Navegacion
