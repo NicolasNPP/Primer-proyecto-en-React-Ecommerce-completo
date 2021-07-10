@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Saludo from '../Saludo/Saludo';
-import axios from 'axios'
 import ItemList from '../ItemList/ItemList';
+import { ItemsContext } from '../../ItemsContext';
 const ItemListContainer = () => {
 
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    axios("https://breakingbadapi.com/api/characters?limit=180&offset=10").then((res) =>
-      setItems(res.data)
-    );
-
-  });
-
+  const [items, setItems] = useContext(ItemsContext);
+  console.log(items);
   return (
 
     <div>

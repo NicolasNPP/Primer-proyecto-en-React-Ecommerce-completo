@@ -10,6 +10,7 @@ const CategoryDetail = ({ match }) => {
     axios(`https://breakingbadapi.com/api/characters?category=${itemID}`).then((res) =>
       setA(res.data)
     );
+    console.log(a);
   });
 
   return (
