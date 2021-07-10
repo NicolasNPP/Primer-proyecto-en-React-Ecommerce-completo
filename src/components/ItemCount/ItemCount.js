@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './ItemCount.css';
 import { useCartContext } from '../../contexts/CartContext'
+import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
 
 
-const ItemCount = ({ nombre, precio }) => { 
+const ItemCount = ({ nombre, precio, identificacion }) => {
 
-const {addToCart} = useCartContext();
+    const [items, setItems] = useContext(ItemsContext);
 
+    const { addToCart } = useCartContext();
 
+    let idprod = items[identificacion];
 
     const onAdd = () => {
-addToCart({nombre}, {number});
+        addToCart({ idprod }, { number });
 
     }
+
 
 
 
@@ -62,7 +66,7 @@ addToCart({nombre}, {number});
             <div className="contienebotoncarrito">
                 <button className="buttoncart" onClick={onAdd}>Agregar al carrito</button>
             </div>
-       
+
         </div>
     )
 }

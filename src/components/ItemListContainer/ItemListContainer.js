@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import Saludo from '../Saludo/Saludo';
 import ItemList from '../ItemList/ItemList';
-import { ItemsContext } from '../../ItemsContext';
+import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
 
 const ItemListContainer = () => {
 
 
   const [items, setItems] = useContext(ItemsContext);
-  
+
   return (
 
     <div>
