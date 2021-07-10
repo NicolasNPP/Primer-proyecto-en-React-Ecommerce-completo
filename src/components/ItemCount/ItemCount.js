@@ -1,7 +1,22 @@
 import React, { useState } from 'react';
 import './ItemCount.css';
+import { useCartContext } from '../../contexts/CartContext'
 
-const ItemCount = () => {
+
+const ItemCount = ({ nombre, precio }) => { 
+
+const {addToCart} = useCartContext();
+
+
+
+    const onAdd = () => {
+addToCart({nombre}, {number});
+
+    }
+
+
+
+
     const [number, setNumber] = useState(4);
     const [stock, setStock] = useState(5);
 
@@ -45,8 +60,9 @@ const ItemCount = () => {
                 <button className="buttonstate" onClick={handdleIncrement}>+</button>
             </div>
             <div className="contienebotoncarrito">
-                <button className="buttoncart" onClick={hannddleAddCart}>Agregar al carrito</button>
+                <button className="buttoncart" onClick={onAdd}>Agregar al carrito</button>
             </div>
+       
         </div>
     )
 }

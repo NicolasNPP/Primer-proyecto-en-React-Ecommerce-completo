@@ -4,6 +4,9 @@ const Item = lazy(() => import('../Item/Item'));
 
 
 
+
+
+
 const ItemList = ({ data }) => {
 
     return (

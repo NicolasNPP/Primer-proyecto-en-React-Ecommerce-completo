@@ -9,11 +9,9 @@ export const ItemsContext = createContext();
 
 const initialState = []
 
-console.log(initialState)
-
 export const ItemsProvider = (props) => {
     const [items, setItems] = useState(initialState);
-    axios(`https://breakingbadapi.com/api/characters?category=Better+Call+Saul`).then((res) =>
+    axios(`https://breakingbadapi.com/api/characters`).then((res) =>
         setItems(res.data)
     );
     // 3 - RETORNAMOS NUESTRO CONTEXT CON UN .PROVIDER

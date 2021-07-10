@@ -7,12 +7,14 @@ import CategoryDetail from './pages/CategoryDetail';
 import AllCat from './components/AllCat/AllCat';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { ItemsProvider } from './ItemsContext';
+import {CartProvider} from './contexts/CartContext'
+
 
 function App() {
 
   return (
     <ItemsProvider>
-
+    <CartProvider>
       <div>
         <Router>
           <div className="App">
@@ -28,6 +30,7 @@ function App() {
           </div>
         </Router>
       </div>
+</CartProvider>
     </ItemsProvider>
   )
 }
