@@ -15,7 +15,14 @@ export const CartProvider = ({ children }) => {
   const addToCart = (item, quant) => {
 
     if (isInCart(item.idprod)) {
-      alert('esta en el carrito')
+      //alert('esta en el carrito')
+      const newCart = cart.map(cartElement => {
+        if (cartElement.idprod === item.idprod) {
+          return { ...cartElement, quant: cartElement.quant + quant }
+        } else return cartElement;
+
+      })
+      setCart(newCart);
     }
     else {
       setCart(prev => [...prev, { ...item, quant }]);

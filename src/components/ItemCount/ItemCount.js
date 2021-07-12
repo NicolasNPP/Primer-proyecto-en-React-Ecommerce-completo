@@ -8,7 +8,7 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
 
     const [items, setItems] = useContext(ItemsContext);
 
-    const { addToCart } = useCartContext();
+    const { cart, addToCart } = useCartContext();
 
     let idprod = items[identificacion];
 
@@ -20,7 +20,7 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
     const [number, setNumber] = useState(0);
     const [stock, setStock] = useState(5);
     const onAdd = () => {
-        addToCart({ idprod }, { number });
+        addToCart({ idprod }, number);
 
 
 
