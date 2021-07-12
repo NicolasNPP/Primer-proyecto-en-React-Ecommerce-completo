@@ -12,17 +12,19 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
 
     let idprod = items[identificacion];
 
+
+
+
+
+
+    const [number, setNumber] = useState(0);
+    const [stock, setStock] = useState(5);
     const onAdd = () => {
         addToCart({ idprod }, { number });
 
+
+
     }
-
-
-
-
-
-    const [number, setNumber] = useState(4);
-    const [stock, setStock] = useState(5);
 
     const handdleIncrement = () => {
         if (number < stock) {
