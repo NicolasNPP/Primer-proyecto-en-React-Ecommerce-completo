@@ -8,9 +8,10 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
 
     const [items, setItems] = useContext(ItemsContext);
 
-    const { cart, addToCart } = useCartContext();
+    const { cart, addToCart, isInCart } = useCartContext();
 
     let idprod = items[identificacion];
+
 
 
 
@@ -21,6 +22,7 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
     const [stock, setStock] = useState(5);
     const onAdd = () => {
         addToCart({ idprod }, number);
+
 
 
 
@@ -57,16 +59,16 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
 
     return (
         <div>
-            <div className="estado">
-                Cantidad: {number}      -    Stock: {stock}
-            </div>
 
-            <div className="contieneboton">
-                <button className="buttonstate" onClick={handdleDecrement}>-</button>
-                <button className="buttonstate" onClick={handdleIncrement}>+</button>
-            </div>
             <div className="contienebotoncarrito">
-                <button className="buttoncart" onClick={onAdd}>Agregar al carrito</button>
+                {isInCart(items[identificacion]) ? <button className="buttoncart">Ir al carrito</button> : <div> <div className="estado">
+                    Cantidad: {number}      -    Stock: {stock}
+                </div>
+
+                    <div className="contieneboton">
+                        <button className="buttonstate" onClick={handdleDecrement}>-</button>
+                        <button className="buttonstate" onClick={handdleIncrement}>+</button>
+                    </div> <button className="buttoncart" onClick={onAdd}>Agregar al carrito</button> </div>}
             </div>
 
         </div>

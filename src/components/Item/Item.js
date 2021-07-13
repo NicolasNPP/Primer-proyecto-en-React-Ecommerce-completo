@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const Item = ({ name, price, description, category, img, id }) => {
 
 
@@ -27,7 +28,7 @@ const Item = ({ name, price, description, category, img, id }) => {
         <Card.Text>
           {description}
         </Card.Text>
-        <ItemCount nombre={name} precio={price} identificacion={id} />
+        <ItemCount nombre={name} precio={price} identificacion={id - 1} />
       </Card.Body>
     </Card>
   )

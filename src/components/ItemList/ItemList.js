@@ -15,7 +15,7 @@ const ItemList = ({ data }) => {
             <div className="container">
                 <div className="row">
                     {data.map(function (num) {
-                        return <div className="col-md-3" key={num.char_id}><Suspense fallback={<div><Loading /></div>}><Item name={num.name} price={num.category} description={num.description} id={num.char_id - 1} img={num.img} /></Suspense></div>
+                        return <div className="col-md-3" key={num.char_id}><Suspense fallback={<div><Loading /></div>}><Item name={num.name} price={num.category} description={num.description} id={num.char_id} img={num.img} /></Suspense></div>
 
                     })}
                 </div>
