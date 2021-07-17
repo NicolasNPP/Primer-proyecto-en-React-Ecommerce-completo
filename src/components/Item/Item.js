@@ -28,7 +28,7 @@ const Item = ({ name, price, description, category, img, id }) => {
         <Card.Text>
           {description}
         </Card.Text>
-        <ItemCount nombre={name} precio={price} identificacion={id - 1} />
+        <ItemCount nombre={name} precio={price} identificacion={id} />
       </Card.Body>
     </Card>
   )

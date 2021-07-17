@@ -10,7 +10,7 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
 
     const { cart, addToCart, isInCart } = useCartContext();
 
-    let idprod = items[identificacion];
+    let idprod = identificacion;
 
 
 
@@ -61,7 +61,7 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
         <div>
 
             <div className="contienebotoncarrito">
-                {isInCart(items[identificacion]) ? <button className="buttoncart">Ir al carrito</button> : <div> <div className="estado">
+                {isInCart(identificacion) ? <button className="buttoncart">Ir al carrito</button> : <div> <div className="estado">
                     Cantidad: {number}      -    Stock: {stock}
                 </div>
 
