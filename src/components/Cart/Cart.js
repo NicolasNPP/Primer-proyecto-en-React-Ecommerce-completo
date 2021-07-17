@@ -10,44 +10,76 @@ import { Table } from 'reactstrap';
 const Cart = () => {
     const { clearCart } = useCartContext();
     const { cart } = useCartContext();
+    const [total, setTotal] = useState(0);
 
-    const borrarCarrito = clearCart;
+
+    const borrarCarrito = () => {
+        clearCart();
+        setTotal(0);
+
+    }
 
     console.log(cart);
 
+    let tf = (tot) => {
+        let x
+        if (tot === 0) {
+            x = false;
+        }
+        else {
+            x = true;
+        }
+
+        return x
+
+
+    }
 
 
 
+    useEffect(() => {
+        cart.map(function (num) {
+            return setTotal(total + num.price * num.quant)
+        })
+
+
+
+    }, []);
 
 
 
     return (
 
+
+
         <div>
-            <Table>
+            {tf(total) ? <div><Table>
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Producto</th>
                         <th>Precio</th>
-                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Precio total</th>
                     </tr>
                 </thead>
 
                 {cart.map(function (num) {
-                    return <CartList id={num.idprod} name={num.idprod} price={num.price} quant={num.quant} />
+                    return <CartList id={num.idprod} name={num.name} price={num.price} quant={num.quant} />
                 })}
 
 
 
-            </Table>
-            <button onClick={borrarCarrito}>Eliminar todo</button>
-            <div>Total:
-                {
+
+            </Table> <button onClick={borrarCarrito}>Eliminar todo</button> Total: {total} </div> : <div> El carrito esta vacio </div>}
+
+            <div>
 
 
 
-                }
+
+
+
             </div>
 
         </div>
