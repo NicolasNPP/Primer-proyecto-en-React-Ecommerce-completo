@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-import axios from 'axios';
 import Saludo from '../Saludo/Saludo';
 import ItemList from '../ItemList/ItemList';
 import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
@@ -39,7 +38,7 @@ const ItemListContainer = () => {
 
   }, []);
 
-  console.log(items);
+
   return (
 
     <div>

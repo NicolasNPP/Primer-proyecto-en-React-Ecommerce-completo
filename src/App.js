@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import ItemDetail from './pages/ItemDetail';
+import Cart from './components/Cart/Cart';
+import CartList from './components/CartList/CartList';
 import CategoryDetail from './pages/CategoryDetail';
 import AllCat from './components/AllCat/AllCat';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -25,6 +27,7 @@ function App() {
                 <Route exact path="/" component={ItemListContainer} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/services" component={Services} />
+                <Route path="/cart" component={Cart} />
                 <Route path="/detail/:id" component={ItemDetail} />
                 <Route path="/category/breaking+bad+bettercallsaul" component={AllCat} />
                 <Route path="/category/:id" component={CategoryDetail} />

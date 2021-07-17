@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget.js';
 import brand from './brand.png';
+import { Link } from "react-router-dom";
 
 const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => {
   const linkuno = "Better+Call+Saul";
@@ -19,18 +20,21 @@ const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, cate
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Inicio</Nav.Link>
-          <Nav.Link href="/services">Servicios</Nav.Link>
+          <Nav.Link><Link to="/">Inicio</Link></Nav.Link>
+          <Nav.Link><Link to="/services">Servicios</Link></Nav.Link>
+
 
           <NavDropdown title="Categorias" id="basic-nav-dropdown">
-            <NavDropdown.Item href={`/category/${linkuno}`}>{categoriauno}</NavDropdown.Item>
-            <NavDropdown.Item href={`/category/${linkdos}`}>{categoriados}</NavDropdown.Item>
+
+            <Nav.Link><Link to={`/category/${linkuno}`}>{categoriauno}</Link></Nav.Link>
+            <Nav.Link><Link to={`/category/${linkdos}`}>{categoriados}</Link></Nav.Link>
 
             <NavDropdown.Divider />
-            <NavDropdown.Item href={"/category/breaking+bad+bettercallsaul"}>{categoriacuatro}</NavDropdown.Item>
+            <Nav.Link><Link to={"/category/breaking+bad+bettercallsaul"}>{categoriacuatro}</Link></Nav.Link>
+
           </NavDropdown>
 
-          <Nav.Link href="/contact">Contacto</Nav.Link>
+          <Nav.Link><Link to="/contact">Contacto</Link></Nav.Link>
 
         </Nav>
         <Form inline>

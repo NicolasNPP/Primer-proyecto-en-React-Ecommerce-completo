@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import './ItemCount.css';
 import { useCartContext } from '../../contexts/CartContext'
 import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
+import { Link } from "react-router-dom";
+
 
 
 const ItemCount = ({ nombre, precio, identificacion }) => {
@@ -18,7 +20,7 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
 
 
 
-    const [number, setNumber] = useState(0);
+    const [number, setNumber] = useState(1);
     const [stock, setStock] = useState(5);
     const onAdd = () => {
         addToCart({ idprod }, number);
@@ -37,8 +39,8 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
     }
 
     const handdleDecrement = () => {
-        if (number <= 0) {
-            setNumber(0);
+        if (number <= 1) {
+            setNumber(1);
         }
         else
             setNumber(number - 1);
@@ -61,7 +63,7 @@ const ItemCount = ({ nombre, precio, identificacion }) => {
         <div>
 
             <div className="contienebotoncarrito">
-                {isInCart(identificacion) ? <button className="buttoncart">Ir al carrito</button> : <div> <div className="estado">
+                {isInCart(identificacion) ? <button className="buttoncart"><Link to="/cart">Ir al carrito</Link></button> : <div> <div className="estado">
                     Cantidad: {number}      -    Stock: {stock}
                 </div>
 
