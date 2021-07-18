@@ -43,7 +43,7 @@ const ItemListContainer = () => {
 
     <div>
       <div>
-        <Saludo greeting={"Compra un curso de actuacion con con tu personaje favorito."} />
+        <Saludo greeting={"Compra tu producto favorito"} />
         <div>
           <div className="container">
             <div className="row">
