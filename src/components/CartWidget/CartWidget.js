@@ -17,9 +17,25 @@ const CartWidget = () => {
 
   });
 
+  let z = (tot) => {
+    let x
+    if (cantitem === 0) {
+      x = false;
+    }
+    else {
+      x = true;
+    }
+
+    return x
+
+
+  }
+
 
   return (
-    <Link to="/cart"><img className="cart" src={cartimage} /> {cantitem} </Link>
+    <div>
+      {z(cantitem) ? <Link to="/cart"><img className="cart" src={cartimage} /> {cantitem} </Link> : <Link to="/cart"><img className="cart" src={cartimage} /></Link>}
+    </div>
   )
 
 }
