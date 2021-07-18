@@ -4,6 +4,7 @@ import { useCartContext } from '../../contexts/CartContext';
 import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
 import CartList from '../CartList/CartList';
 import { Table } from 'reactstrap';
+import { Link } from "react-router-dom";
 
 
 
@@ -71,7 +72,7 @@ const Cart = () => {
 
 
 
-            </Table> <button onClick={borrarCarrito}>Eliminar todo</button> Total: {total} </div> : <div> El carrito esta vacio </div>}
+            </Table> <button onClick={borrarCarrito}>Eliminar todo</button> Total: {total} </div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
 
             <div>
 

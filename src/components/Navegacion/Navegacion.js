@@ -4,6 +4,7 @@ import CartWidget from '../CartWidget/CartWidget.js';
 import brand from './brand.png';
 import { Link } from "react-router-dom";
 
+
 const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => {
   const linkuno = "Better+Call+Saul";
   const linkdos = "Breaking+Bad";
@@ -37,10 +38,7 @@ const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, cate
           <Nav.Link><Link to="/contact">Contacto</Link></Nav.Link>
 
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="¿Que quieres comprar?" className="mr-sm-2" />
-          <Button variant="outline-success">Buscar</Button>
-        </Form>
+
         <CartWidget />
       </Navbar.Collapse>
     </Navbar>
