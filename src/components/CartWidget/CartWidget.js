@@ -6,16 +6,9 @@ import { useCartContext } from '../../contexts/CartContext';
 
 const CartWidget = () => {
   const { cart } = useCartContext();
-  const [cantitem, setCantItem] = useState(0);
-
-  useEffect(() => {
-    cart.map(function (num) {
-      return setCantItem(num.quant)
-    })
 
 
-
-  });
+  const cantitem = cart.reduce((acc, { quant }) => acc + quant, 0);
 
   let z = (tot) => {
     let x
