@@ -9,6 +9,11 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = () => setCart([])
 
+  const cantitem = cart.reduce((acc, { quant }) => acc + quant, 0);
+
+  const cantitemdos = cart.reduce((acc, { quant, price }) => acc + (quant * price), 0);
+
+
   const isInCart = idprod => cart.some(item => item.idprod === idprod)
 
   const addToCart = (item, quant, price, name) => {
@@ -31,7 +36,7 @@ export const CartProvider = ({ children }) => {
   };
   console.log(cart);
 
-  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart }}>
+  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, cantitem, cantitemdos }}>
     {children}
   </CartContext.Provider>
 

@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
     const { clearCart } = useCartContext();
-    const { cart } = useCartContext();
+    const { cart, cantitemdos } = useCartContext();
     const [total, setTotal] = useState(0);
 
-    const cantitem = cart.reduce((acc, { quant, price }) => acc + (quant * price), 0);
+
 
 
     const borrarCarrito = () => {
@@ -74,7 +74,7 @@ const Cart = () => {
 
 
 
-            </Table> <button onClick={borrarCarrito}>Eliminar todo</button> Total: {cantitem} </div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
+            </Table> <button onClick={borrarCarrito}>Limpiar carrito</button> Total: {cantitemdos} </div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
 
             <div>
 

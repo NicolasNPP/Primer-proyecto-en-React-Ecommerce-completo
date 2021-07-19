@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { useCartContext } from '../../contexts/CartContext';
 
 const CartWidget = () => {
-  const { cart } = useCartContext();
+  const { cantitem, cart } = useCartContext();
 
 
-  const cantitem = cart.reduce((acc, { quant }) => acc + quant, 0);
+
 
   let z = (tot) => {
     let x
