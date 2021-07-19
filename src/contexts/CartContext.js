@@ -13,14 +13,7 @@ export const CartProvider = ({ children }) => {
 
   const cantitemdos = cart.reduce((acc, { quant, price }) => acc + (quant * price), 0);
 
-  const eliminar = () => {
-    const yy = cart.find(obj => obj.idprod === obj.idprod);
-    const yyy = cart.indexOf(yy);
-    console.log(yyy);
-    console.log(cart);
-    cart.splice(yyy, 1);
-    console.log(cart);
-  }
+
 
   const isInCart = idprod => cart.some(item => item.idprod === idprod)
 
@@ -44,7 +37,7 @@ export const CartProvider = ({ children }) => {
   };
   console.log(cart);
 
-  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, cantitem, cantitemdos, eliminar }}>
+  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, cantitem, cantitemdos }}>
     {children}
   </CartContext.Provider>
 

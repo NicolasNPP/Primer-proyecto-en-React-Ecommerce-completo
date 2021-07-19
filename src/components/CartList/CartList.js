@@ -4,9 +4,17 @@ import { useCartContext } from '../../contexts/CartContext';
 
 
 const CartList = ({ name, price, quant, id }) => {
-    const { cart, eliminar } = useCartContext();
+    const { cart } = useCartContext();
 
-
+    const eliminar = () => {
+        const yy = cart.find(obj => obj.idprod === id);
+        console.log(yy);
+        const yyy = cart.indexOf(yy);
+        console.log("El index es " + yyy);
+        console.log(cart);
+        cart.splice(yyy, 1);
+        console.log(cart);
+    }
 
 
     return (
