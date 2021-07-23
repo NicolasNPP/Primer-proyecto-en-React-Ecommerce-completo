@@ -4,17 +4,9 @@ import { useCartContext } from '../../contexts/CartContext';
 
 
 const CartList = ({ name, price, quant, id }) => {
-    const { cart } = useCartContext();
+    const { cart, borrarElemento } = useCartContext();
 
-    const eliminar = () => {
-        const yy = cart.find(obj => obj.idprod === id);
-        console.log(yy);
-        const yyy = cart.indexOf(yy);
-        console.log("El index es " + yyy);
-        console.log(cart);
-        cart.splice(yyy, 1);
-        console.log(cart);
-    }
+
 
 
     return (
@@ -23,7 +15,7 @@ const CartList = ({ name, price, quant, id }) => {
 
         <tbody id={id}>
             <tr>
-                <th><button onClick={eliminar}>X</button></th>
+                <th><button onClick={() => borrarElemento(id)}>X</button></th>
                 <td>{name}</td>
                 <td>{price}</td>
                 <td>{quant}</td>

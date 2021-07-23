@@ -9,6 +9,12 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = () => setCart([])
 
+  const borrarElemento = (elid) => {
+    const newCarrito = cart.filter((cart) => cart.idprod !== elid);
+    setCart(newCarrito);
+    console.log(cart);
+  }
+
   const cantitem = cart.reduce((acc, { quant }) => acc + quant, 0);
 
   const cantitemdos = cart.reduce((acc, { quant, price }) => acc + (quant * price), 0);
@@ -37,7 +43,7 @@ export const CartProvider = ({ children }) => {
   };
   console.log(cart);
 
-  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, cantitem, cantitemdos }}>
+  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, isInCart, cantitem, cantitemdos, borrarElemento }}>
     {children}
   </CartContext.Provider>
 
