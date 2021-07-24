@@ -4,6 +4,7 @@ import Contact from './pages/Contact';
 import Services from './pages/Services';
 import ItemDetail from './pages/ItemDetail';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 import CartList from './components/CartList/CartList';
 import CategoryDetail from './pages/CategoryDetail';
 import AllCat from './components/AllCat/AllCat';
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/contact" component={Contact} />
                 <Route path="/services" component={Services} />
                 <Route path="/cart" component={Cart} />
+                <Route path="/checkout" component={Checkout} />
                 <Route path="/detail/:id" component={ItemDetail} />
                 <Route path="/category/breaking+bad+bettercallsaul" component={AllCat} />
                 <Route path="/category/:id" component={CategoryDetail} />

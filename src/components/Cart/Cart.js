@@ -74,7 +74,7 @@ const Cart = () => {
 
 
 
-            </Table> <button onClick={borrarCarrito}>Limpiar carrito</button> Total: {cantitemdos} </div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
+            </Table> <button onClick={borrarCarrito}>Limpiar carrito</button> Total: {cantitemdos} <Link to={`/checkout`}><button>Continuar compra</button></Link></div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
 
             <div>
 
