@@ -25,7 +25,7 @@ const Checkout = () => {
     };
 
     const [values, setValues] = useState(initialState);
-    const [id, setID] = useState('');
+    const [ide, setIDe] = useState('');
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
@@ -50,7 +50,8 @@ const Checkout = () => {
         })
             .then(
                 docRef => {
-                    setID(docRef.id);
+                    setIDe(docRef.id);
+                    alert(`Compra realizada, numero de operacion: ${ide}`)
                 }
             )
             .catch(e => console.log('error', e));

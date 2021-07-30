@@ -11,13 +11,13 @@ const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, cate
 
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/"><img
+      <Link to="/">  <Navbar.Brand href="/"><img
         alt=""
         src={brand}
         width="30"
         height="30"
         className="d-inline-block align-top"
-      />{brandname}</Navbar.Brand>
+      />{brandname}</Navbar.Brand> </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -25,7 +25,7 @@ const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, cate
           <Nav.Link><Link to="/services">Servicios</Link></Nav.Link>
 
 
-          <NavDropdown title="Categorias" id="basic-nav-dropdown">
+          <NavDropdown title="Catalogo" id="basic-nav-dropdown">
 
             <Nav.Link><Link to={`/category/${linkuno}`}>{categoriauno}</Link></Nav.Link>
             <Nav.Link><Link to={`/category/${linkdos}`}>{categoriados}</Link></Nav.Link>

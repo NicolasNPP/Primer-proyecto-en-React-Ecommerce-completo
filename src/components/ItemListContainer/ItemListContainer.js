@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, Suspense, lazy } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Saludo from '../Saludo/Saludo';
+import ItemList from '../ItemList/ItemList';
 import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
 import { db } from '../../firebase';
-import Loading from '../Loading/Loading';
-const ItemList = lazy(() => import('../ItemList/ItemList'));
 
 
 
@@ -48,7 +47,7 @@ const ItemListContainer = () => {
         <div>
           <div className="container">
             <div className="row">
-              <Suspense fallback={<Loading />}> <ItemList data={items} /> </Suspense>
+              <ItemList data={items} />
             </div>
           </div>
         </div>
