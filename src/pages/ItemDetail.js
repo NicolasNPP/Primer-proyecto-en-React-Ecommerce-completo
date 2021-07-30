@@ -1,10 +1,9 @@
-import axios from 'axios';
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, Suspense, lazy } from 'react';
 import { ItemsContext } from '../contexts/ItemsContext/ItemsContext';
-import { Link } from 'react-router-dom';
-import ItemSemantic from '../components/ItemSemantic/ItemSemantic';
 import './ItemDetail.css';
 import { db } from '../firebase';
+import Loading from '../components/Loading/Loading';
+const ItemSemantic = lazy(() => import('../components/ItemSemantic/ItemSemantic'))
 
 const ItemDetail = ({ match }) => {
     let itemID = match.params.id;
@@ -26,11 +25,13 @@ const ItemDetail = ({ match }) => {
     return (
         <div className="container">
 
+            <div className="row">
 
 
-            <ItemSemantic price={item.price} name={item.name} img={item.photo} description={item.description} id={itemID} />
+                <div className="col-md-3">  <Suspense fallback={<Loading></Loading>}> <ItemSemantic price={item.price} name={item.name} img={item.photo} description={item.description} id={itemID} /></Suspense></div>
 
 
+            </div>
 
         </div>
 

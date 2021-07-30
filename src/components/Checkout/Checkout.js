@@ -1,11 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useCartContext } from '../../contexts/CartContext';
-import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
-import CartList from '../CartList/CartList';
-import { Table } from 'reactstrap';
-import { Link } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import Cart from '../Cart/Cart';
 import { db } from '../../firebase';
 
 
@@ -34,6 +29,8 @@ const Checkout = () => {
     }
 
     const handleOnSumbit = (e) => {
+
+
         e.preventDefault();
         console.log('hiciste click');
         console.log(values);

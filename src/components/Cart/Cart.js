@@ -38,6 +38,20 @@ const Cart = () => {
 
     }
 
+    let tff = (tot) => {
+        let y
+        if (tot === 0) {
+            y = false;
+        }
+        else {
+            y = true;
+        }
+
+        return y
+
+
+    }
+
 
 
     useEffect(() => {
@@ -56,25 +70,35 @@ const Cart = () => {
 
 
         <div>
-            {tf(total) ? <div><Table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Precio unitario</th>
-                        <th>Precio total</th>
-                    </tr>
-                </thead>
+            {tf(total) ? <div>
 
-                {cart.map(function (num) {
-                    return <CartList id={num.idprod} name={num.name} price={num.price} quant={num.quant} />
-                })}
+                {tff(cantitemdos) ? <div>     <Table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Precio unitario</th>
+                            <th>Precio total</th>
+                        </tr>
+                    </thead>
+
+                    {cart.map(function (num) {
+                        return <CartList id={num.idprod} name={num.name} price={num.price} quant={num.quant} />
+                    })}
 
 
 
 
-            </Table> <button onClick={borrarCarrito}>Limpiar carrito</button> Total: {cantitemdos} <Link to={`/checkout`}><button>Continuar compra</button></Link></div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
+                </Table> </div> : <div> </div>}
+
+
+
+                {tff(cantitemdos) ? <div>    <button onClick={borrarCarrito}>Limpiar carrito</button> Total: {cantitemdos} <Link to={`/checkout`}><button>Continuar compra</button></Link> </div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
+
+            </div>
+                :
+                <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
 
             <div>
 
