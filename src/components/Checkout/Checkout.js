@@ -30,8 +30,8 @@ const Checkout = () => {
 
     const handleOnSumbit = (e) => {
 
-
         e.preventDefault();
+
         console.log('hiciste click');
         console.log(values);
         setValues({ ...initialState });
@@ -56,26 +56,28 @@ const Checkout = () => {
     }
 
 
+
     return (
         <div>
+            <div>
 
-            <Form onSubmit={handleOnSumbit}>
-                <FormGroup>
-                    <Label for="exampleAddress">Nombre</Label>
-                    <Input type="text" name="nombre" id="nombre" placeholder="Nombre" onChange={handleOnChange} value={values.nombre} />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="exampleAddress">Apellido</Label>
-                    <Input type="text" name="apellido" id="apellido" placeholder="Apelllido" onChange={handleOnChange} value={values.apellido} />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="exampleEmail">Email</Label>
-                    <Input type="email" name="email" id="exampleEmail" placeholder="Ingresa tu correo" onChange={handleOnChange} value={values.email} />
-                </FormGroup>
-                <b>Total a pagar: {cantitemdos}</b> <p></p>
-                <Button>Confirmar compra</Button>
-            </Form>
-
+                <Form onSubmit={handleOnSumbit}>
+                    <FormGroup>
+                        <Label for="exampleAddress">Nombre</Label>
+                        <Input type="text" name="nombre" id="nombre" placeholder="Nombre" onChange={handleOnChange} value={values.nombre} />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="exampleAddress">Apellido</Label>
+                        <Input type="text" name="apellido" id="apellido" placeholder="Apelllido" onChange={handleOnChange} value={values.apellido} />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="exampleEmail">Email</Label>
+                        <Input type="email" name="email" id="exampleEmail" placeholder="Ingresa tu correo" onChange={handleOnChange} value={values.email} />
+                    </FormGroup>
+                    <b>Total a pagar: {cantitemdos} y el id es {ide} </b> <p></p>
+                    <Button>Confirmar compra</Button>
+                </Form>
+            </div>
         </div>
 
 
