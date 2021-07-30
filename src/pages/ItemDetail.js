@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext, useState, useEffect } from 'react';
 import { ItemsContext } from '../contexts/ItemsContext/ItemsContext';
 import { Link } from 'react-router-dom';
-import Item from '../components/Item/Item';
+import ItemSemantic from '../components/ItemSemantic/ItemSemantic';
 import './ItemDetail.css';
 import { db } from '../firebase';
 
@@ -28,7 +28,7 @@ const ItemDetail = ({ match }) => {
 
 
 
-            <Item price={item.price} name={item.name} img={item.photo} description={item.description} id={itemID} />
+            <ItemSemantic price={item.price} name={item.name} img={item.photo} description={item.description} id={itemID} />
 
 
 

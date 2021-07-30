@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import ItemCount from '../ItemCount/ItemCount'
 import './Item.css';
@@ -16,7 +15,7 @@ const Item = ({ name, price, description, category, img, id }) => {
 
   return (
 
-    <Card className="tarjeta">
+    <Card>
       <Link to={`/detail/${id}`}>  <Card.Img variant="top" src={img} className="imgtamaño" /> </Link>
       <Card.Body className="cuerpocard">
         <Link to={`/detail/${id}`}><Card.Title>{name}</Card.Title></Link>

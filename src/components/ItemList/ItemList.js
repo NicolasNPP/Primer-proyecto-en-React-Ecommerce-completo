@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import Loading from '../Loading/Loading';
-const Item = lazy(() => import('../Item/Item'));
+import Item from '../Item/Item';
+import ItemSemantic from '../ItemSemantic/ItemSemantic';
+
 
 
 
@@ -15,7 +16,7 @@ const ItemList = ({ data }) => {
             <div className="container">
                 <div className="row">
                     {data.map(function (num) {
-                        return <div className="col-md-3" key={num.id}><Suspense fallback={<div><Loading /></div>}><Item name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} /></Suspense></div>
+                        return <div className="col-md-3" key={num.id}><ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} /></div>
 
                     })}
                 </div>

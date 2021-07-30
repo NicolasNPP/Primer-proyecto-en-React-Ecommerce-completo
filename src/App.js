@@ -11,6 +11,7 @@ import AllCat from './components/AllCat/AllCat';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { ItemsProvider } from './contexts/ItemsContext/ItemsContext';
 import { CartProvider } from './contexts/CartContext'
+import 'semantic-ui-css/semantic.min.css'
 
 
 
