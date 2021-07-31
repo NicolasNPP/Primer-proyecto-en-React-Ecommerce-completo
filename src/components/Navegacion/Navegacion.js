@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => {
-  const linkuno = "Better+Call+Saul";
+  const linkuno = "3KWClLF7hXIrOnnfjCgJ";
   const linkdos = "Breaking+Bad";
 
   return (

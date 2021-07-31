@@ -1,28 +1,51 @@
-import axios from 'axios';
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Item from '../components/Item/Item';
+import ItemSemantic from '../components/ItemSemantic/ItemSemantic';
+import { db } from '../firebase';
 
 const CategoryDetail = ({ match }) => {
-  const itemID = match.params.id;
-  const [a, setA] = useState([]);
+  let CatID = match.params.id;
+  const initialState = []
+  const [ite, setIte] = useState(initialState);
+
 
   useEffect(() => {
-    axios(`https://breakingbadapi.com/api/characters?category=${itemID}`).then((res) =>
-      setA(res.data)
-    );
-    
-  });
+
+
+
+    const docc = [];
+    db.collection("products").where("categorie", "==", CatID)
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          // doc.data() is never undefined for query doc snapshots
+
+          console.log(doc.id, " => ", doc.data());
+
+          docc.push({ ...doc.data(), id: doc.id });
+
+
+        });
+        setIte(docc);
+      })
+
+
+
+
+
+
+  }, []);
 
   return (
     <div className="container">
-      <div className="row">
 
-        {a.map(function (num) {
-          return <div className="col-md-3" key={num.char_id}><Item name={num.name} price={num.category} description={num.description} id={num.char_id} img={num.img} /></div>
+      <div className="row">
+        {ite.map(function (num) {
+          return <div key={num.id}><ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} /></div>
 
         })}
       </div>
-    </div>
+    </div >
   );
 };
 
