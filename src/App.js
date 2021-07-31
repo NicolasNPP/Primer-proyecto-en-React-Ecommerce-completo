@@ -24,7 +24,7 @@ function App() {
         <div>
           <Router>
             <div className="App">
-              <Navegacion brandname={" Nico ecommerce"} categoriauno={"Notebooks"} categoriados={"Personajes de Breaking Bad"} categoriacuatro={"Catalogo completo"} />
+              <Navegacion brandname={" Nico ecommerce"} categoriauno={"Notebooks"} categoriados={"Accesorios"} categoriatres={"Celulares"} categoriacuatro={"Monitores"} />
               <Switch>
                 <Route exact path="/" component={ItemListContainer} />
                 <Route path="/contact" component={Contact} />
