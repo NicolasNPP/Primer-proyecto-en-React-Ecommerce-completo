@@ -28,7 +28,7 @@ const ItemDetail = ({ match }) => {
             <div className="row">
 
 
-                <div className="col-md-3">  <Suspense fallback={<Loading></Loading>}> <ItemSemantic price={item.price} name={item.name} img={item.photo} description={item.description} id={itemID} /></Suspense></div>
+                <div className="col-md-3">  <Suspense fallback={<Loading></Loading>}> <ItemSemantic price={item.price} name={item.name} img={item.photo} description={item.description} id={itemID} stock={item.stock} /></Suspense></div>
 
 
             </div>
