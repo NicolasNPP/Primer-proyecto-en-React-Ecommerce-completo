@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import ItemSemantic from '../components/ItemSemantic/ItemSemantic';
 import { db } from '../firebase';
+import Loading from '../components/Loading/Loading';
+const ItemSemantic = lazy(() => import('../components/ItemSemantic/ItemSemantic'))
 
 const CategoryDetail = ({ match }) => {
   let CatID = match.params.id;
@@ -42,7 +43,7 @@ const CategoryDetail = ({ match }) => {
         {ite.map(function (num) {
           return <div key={num.id} className="col-md-3">
 
-            <ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} stock={num.stock} />
+            <Suspense fallback={<Loading></Loading>}><ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} stock={num.stock} /></Suspense>
 
           </div>
 
