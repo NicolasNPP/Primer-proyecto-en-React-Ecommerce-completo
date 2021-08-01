@@ -3,9 +3,10 @@ import cartimage from './cart.png'
 import './cart.css';
 import { Link } from "react-router-dom";
 import { useCartContext } from '../../contexts/CartContext';
+import './CartWidget.css';
 
 const CartWidget = () => {
-  const { cantitem, cart } = useCartContext();
+  const { cantitem } = useCartContext();
 
 
 
@@ -27,7 +28,7 @@ const CartWidget = () => {
 
   return (
     <div>
-      {z(cantitem) ? <Link to="/cart"><img className="cart" src={cartimage} /> {cantitem} </Link> : <Link to="/cart"><img className="cart" src={cartimage} /></Link>}
+      {z(cantitem) ? <Link className="color" to="/cart"><img className="cart" src={cartimage} /> {cantitem} </Link> : <Link to="/cart"><img className="cart" src={cartimage} /></Link>}
     </div>
   )
 

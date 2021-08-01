@@ -39,6 +39,8 @@ display: flex;
     padding-right: 14px;
     
     border-color: black;
+    margin-bottom: 25px;
+    margin-top: 5px;
 
 
 }
@@ -52,11 +54,13 @@ display: flex;
   padding-right: 14px;
   
   border-color: transparent;
+  margin-bottom: 25px;
 
 
 }
 .link {
   color: white;
+  
   
 }
 

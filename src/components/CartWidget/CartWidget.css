@@ -1,0 +1,8 @@
+.color {
+    color: black;
+}
+
+.color:hover {
+    text-decoration: none;
+    color: black
+}
