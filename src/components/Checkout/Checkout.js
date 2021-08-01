@@ -92,15 +92,15 @@ const Checkout = () => {
                         <Form onSubmit={handleOnSumbit}>
                             <FormGroup>
                                 <Label for="exampleAddress">Nombre</Label>
-                                <Input type="text" name="nombre" id="nombre" placeholder="Nombre" onChange={handleOnChange} value={values.nombre} />
+                                <Input type="text" name="nombre" id="nombre" placeholder="Nombre" onChange={handleOnChange} value={values.nombre} required />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="exampleAddress">Apellido</Label>
-                                <Input type="text" name="apellido" id="apellido" placeholder="Apelllido" onChange={handleOnChange} value={values.apellido} />
+                                <Input type="text" name="apellido" id="apellido" placeholder="Apelllido" onChange={handleOnChange} value={values.apellido} required />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="exampleEmail">Email</Label>
-                                <Input type="email" name="email" id="exampleEmail" placeholder="Ingresa tu correo" onChange={handleOnChange} value={values.email} />
+                                <Input type="email" name="email" id="exampleEmail" placeholder="Ingresa tu correo" onChange={handleOnChange} value={values.email} required />
                             </FormGroup>
                             <b>Total a pagar: {cantitemdos} </b> <p></p>
                             <Button>Confirmar compra</Button>
