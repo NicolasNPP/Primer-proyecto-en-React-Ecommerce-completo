@@ -63,7 +63,7 @@ const ItemCount = ({ nombre, precio, identificacion, price, name }) => {
         <div>
 
             <div className="contienebotoncarrito">
-                {isInCart(identificacion) ? <button className="buttoncart"><Link to="/cart">Ir al carrito</Link></button> : <div> <div className="estado">
+                {isInCart(identificacion) ? <button className="buttongocart"><Link to="/cart" className="link">Ir al carrito</Link></button> : <div> <div className="estado">
                     Cantidad: {number}      -    Stock: {stock}
                 </div>
 

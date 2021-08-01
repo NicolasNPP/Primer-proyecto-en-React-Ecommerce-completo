@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useCartContext } from '../../contexts/CartContext';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { db } from '../../firebase';
-import { Link } from "react-router-dom";
 
 
 
@@ -85,28 +84,32 @@ const Checkout = () => {
     }
 
     return (
-        <div>
-            {tff(cantitemdos) ? <div>
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12">
+                    {tff(cantitemdos) ? <div>
 
-                <Form onSubmit={handleOnSumbit}>
-                    <FormGroup>
-                        <Label for="exampleAddress">Nombre</Label>
-                        <Input type="text" name="nombre" id="nombre" placeholder="Nombre" onChange={handleOnChange} value={values.nombre} />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="exampleAddress">Apellido</Label>
-                        <Input type="text" name="apellido" id="apellido" placeholder="Apelllido" onChange={handleOnChange} value={values.apellido} />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="exampleEmail">Email</Label>
-                        <Input type="email" name="email" id="exampleEmail" placeholder="Ingresa tu correo" onChange={handleOnChange} value={values.email} />
-                    </FormGroup>
-                    <b>Total a pagar: {cantitemdos} </b> <p></p>
-                    <Button>Confirmar compra</Button>
-                </Form>
-            </div> : <div> </div>}
+                        <Form onSubmit={handleOnSumbit}>
+                            <FormGroup>
+                                <Label for="exampleAddress">Nombre</Label>
+                                <Input type="text" name="nombre" id="nombre" placeholder="Nombre" onChange={handleOnChange} value={values.nombre} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="exampleAddress">Apellido</Label>
+                                <Input type="text" name="apellido" id="apellido" placeholder="Apelllido" onChange={handleOnChange} value={values.apellido} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="exampleEmail">Email</Label>
+                                <Input type="email" name="email" id="exampleEmail" placeholder="Ingresa tu correo" onChange={handleOnChange} value={values.email} />
+                            </FormGroup>
+                            <b>Total a pagar: {cantitemdos} </b> <p></p>
+                            <Button>Confirmar compra</Button>
+                        </Form>
+                    </div> : <div> </div>}
 
-            {comprobante(ide) ? <div>Compra realizada con exito, el numero de operacion es: <b>{ide}</b>   </div> : <div></div>}
+                    {comprobante(ide) ? <div>¡Listo! Compra realizada con exito, el numero de operacion es: <b>{ide}</b>   </div> : <div></div>}
+                </div>
+            </div>
         </div>
 
 

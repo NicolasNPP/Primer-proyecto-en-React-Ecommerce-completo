@@ -19,7 +19,7 @@ display: flex;
     }
 
 .buttonstate {
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(43, 43, 43);
     color: white;
     border-radius: 2000px;
     margin: 1px;
@@ -41,4 +41,20 @@ display: flex;
     border-color: transparent;
 
 
+}
+.buttongocart {
+  background-color: black;
+  color: white;
+  border-radius: 2000px;
+  margin: 1px;
+  margin-bottom: 5px;
+  padding-left: 14px;
+  padding-right: 14px;
+  
+  border-color: transparent;
+
+
+}
+.link {
+  color: white;
 }

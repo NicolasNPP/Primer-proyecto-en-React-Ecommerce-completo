@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-boots
 import CartWidget from '../CartWidget/CartWidget.js';
 import brand from './brand.png';
 import { Link } from "react-router-dom";
+import './Navegacion.css';
 
 
 const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, categoriacuatro }) => {

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useCartContext } from '../../contexts/CartContext';
+import './Cartlist.css';
 
 
 
@@ -15,7 +16,7 @@ const CartList = ({ name, price, quant, id }) => {
 
         <tbody id={id}>
             <tr>
-                <th><button onClick={() => borrarElemento(id)}>X</button></th>
+                <th><button className="buttondelete" onClick={() => borrarElemento(id)}>X</button></th>
                 <td>{name}</td>
                 <td>{price}</td>
                 <td>{quant}</td>

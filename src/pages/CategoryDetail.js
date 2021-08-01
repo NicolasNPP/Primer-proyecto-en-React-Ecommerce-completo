@@ -37,7 +37,7 @@ const CategoryDetail = ({ match }) => {
 
   return (
     <div className="container">
-
+      <center><h1>{CatID}</h1></center>
       <div className="row">
         {ite.map(function (num) {
           return <div key={num.id} className="col-md-3">

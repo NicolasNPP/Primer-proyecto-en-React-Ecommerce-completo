@@ -78,7 +78,7 @@ const Cart = () => {
                             <th>#</th>
                             <th>Producto</th>
                             <th>Precio</th>
-                            <th>Precio unitario</th>
+                            <th>Cantidad</th>
                             <th>Precio total</th>
                         </tr>
                     </thead>
@@ -94,7 +94,7 @@ const Cart = () => {
 
 
 
-                {tff(cantitemdos) ? <div>    <button onClick={borrarCarrito}>Limpiar carrito</button> Total: {cantitemdos} <Link to={`/checkout`}><button>Continuar compra</button></Link> </div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
+                {tff(cantitemdos) ? <div>    <button className="buttons" onClick={borrarCarrito}>Limpiar carrito</button> Total: {cantitemdos} <Link to={`/checkout`}><button className="buttons">Continuar compra</button></Link> </div> : <div> El carrito esta vacio <Link to="/">Ver productos</Link> </div>}
 
             </div>
                 :
