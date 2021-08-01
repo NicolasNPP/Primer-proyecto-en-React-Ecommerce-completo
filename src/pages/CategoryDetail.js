@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import Item from '../components/Item/Item';
 import ItemSemantic from '../components/ItemSemantic/ItemSemantic';
 import { db } from '../firebase';
 
@@ -34,7 +33,7 @@ const CategoryDetail = ({ match }) => {
 
 
 
-  }, []);
+  }, [CatID]);
 
   return (
     <div className="container">
