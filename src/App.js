@@ -31,7 +31,7 @@ function App() {
                 <Route path="/services" component={Services} />
                 <Route path="/cart" component={Cart} />
                 <Route path="/checkout" component={Checkout} />
-                <Route path="/detail/:id" component={ItemDetail} />
+                <Route path="/detail/:name/:id" component={ItemDetail} />
 
               </Switch>
             </div>
