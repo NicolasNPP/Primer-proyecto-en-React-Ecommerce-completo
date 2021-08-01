@@ -1,7 +1,12 @@
-a {
+.colores {
     color: black;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color:black;
+.colores:hover{
+color: rgb(65, 65, 65); 
+text-decoration: none;   
+}
+
+#basic-nav-dropdown {
+    color: black;
 }

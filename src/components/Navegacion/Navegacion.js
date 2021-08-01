@@ -24,22 +24,22 @@ const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, cate
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link><Link to="/">Inicio</Link></Nav.Link>
-          <Nav.Link><Link to="/services">Servicios</Link></Nav.Link>
+          <Nav.Link><Link className="colores" to="/">Inicio</Link></Nav.Link>
+          <Nav.Link><Link className="colores" to="/services">Servicios</Link></Nav.Link>
 
 
           <NavDropdown title="Catalogo" id="basic-nav-dropdown">
 
-            <Nav.Link><Link to={`/category/${linkuno}`}>{categoriauno}</Link></Nav.Link>
-            <Nav.Link><Link to={`/category/${linkdos}`}>{categoriados}</Link></Nav.Link>
-            <Nav.Link><Link to={`/category/${linktres}`}>{categoriatres}</Link></Nav.Link>
-            <Nav.Link><Link to={`/category/${linkcuatro}`}>{categoriacuatro}</Link></Nav.Link>
+            <Nav.Link><Link className="colores" to={`/category/${linkuno}`}>{categoriauno}</Link></Nav.Link>
+            <Nav.Link><Link className="colores" to={`/category/${linkdos}`}>{categoriados}</Link></Nav.Link>
+            <Nav.Link><Link className="colores" to={`/category/${linktres}`}>{categoriatres}</Link></Nav.Link>
+            <Nav.Link><Link className="colores" to={`/category/${linkcuatro}`}>{categoriacuatro}</Link></Nav.Link>
 
 
 
           </NavDropdown>
 
-          <Nav.Link><Link to="/contact">Contacto</Link></Nav.Link>
+          <Nav.Link><Link className="colores" to="/contact">Contacto</Link></Nav.Link>
 
         </Nav>
 

@@ -30,15 +30,15 @@ display: flex;
     }
 
 .buttoncart {
-    background-color: rgb(81, 162, 81);
-    color: white;
+    background-color:white;
+    color:black;
     border-radius: 2000px;
     margin: 1px;
     margin-bottom: 5px;
     padding-left: 14px;
     padding-right: 14px;
     
-    border-color: transparent;
+    border-color: black;
 
 
 }
@@ -57,4 +57,11 @@ display: flex;
 }
 .link {
   color: white;
+  
+}
+
+.link:hover {
+  color: rgb(227, 227, 227);
+  text-decoration: none;
+  
 }
