@@ -12,7 +12,7 @@ const ItemList = ({ data }) => {
             <Container>
                 <Row>
                     {data.map(function (num) {
-                        return <Col md="3"><div key={num.id}><Suspense fallback={<Loading></Loading>}><ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} /></Suspense></div></Col>
+                        return <Col md="3"><div key={num.id}><Suspense fallback={<Loading></Loading>}><ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} stock={num.stock} /></Suspense></div></Col>
 
                     })}
                 </Row>

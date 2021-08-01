@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
-const ItemCount = ({ nombre, precio, identificacion, price, name }) => {
+const ItemCount = ({ nombre, precio, identificacion, price, name, stock }) => {
 
     const [items, setItems] = useContext(ItemsContext);
 
@@ -21,7 +21,7 @@ const ItemCount = ({ nombre, precio, identificacion, price, name }) => {
 
 
     const [number, setNumber] = useState(1);
-    const [stock, setStock] = useState(5);
+
     const onAdd = () => {
         addToCart({ idprod }, number, price, name);
 

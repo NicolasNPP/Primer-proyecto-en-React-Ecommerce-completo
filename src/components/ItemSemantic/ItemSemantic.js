@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './ItemSemantic.css';
 
 
-const ItemSemantic = ({ name, price, description, category, img, id }) => (
+const ItemSemantic = ({ name, price, description, category, img, id, stock }) => (
   <div className="tarjeta"> <Card>
     <Link to={`/detail/${id}`}> <Image src={img} wrapped ui={false} /></Link>
     <Card.Content>
@@ -20,7 +20,7 @@ const ItemSemantic = ({ name, price, description, category, img, id }) => (
         {description}
       </Card.Description>
     </Card.Content>
-    <ItemCount nombre={name} precio={price} identificacion={id} price={price} name={name} />
+    <ItemCount nombre={name} precio={price} identificacion={id} price={price} name={name} stock={stock} />
   </Card></div>
 )
 
