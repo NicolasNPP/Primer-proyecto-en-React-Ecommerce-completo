@@ -9,9 +9,13 @@
 .tarjeta {
     margin-top: 15px;
     
+    
 }
 
 .cuerpocard {
     height: 270px;
 }
 
+.tarjeta {
+    margin-bottom: 20px;
+}

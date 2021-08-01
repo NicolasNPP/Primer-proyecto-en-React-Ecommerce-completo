@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget.js';
-import brand from './brand.png';
+import brand from './logo.png';
 import { Link } from "react-router-dom";
 import './Navegacion.css';
 

@@ -23,7 +23,7 @@ function App() {
         <div>
           <Router>
             <div className="App">
-              <Navegacion brandname={" Nico ecommerce"} categoriauno={"Notebooks"} categoriados={"Accesorios"} categoriatres={"Celulares"} categoriacuatro={"Monitores"} />
+              <Navegacion brandname={" React ecommerce"} categoriauno={"Notebooks"} categoriados={"Accesorios"} categoriatres={"Celulares"} categoriacuatro={"Monitores"} />
               <Switch>
                 <Route path="/category/:id" component={CategoryDetail} />
                 <Route exact path="/" component={ItemListContainer} />
