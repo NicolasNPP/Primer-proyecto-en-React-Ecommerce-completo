@@ -1,4 +1,5 @@
 -Para este primer proyecto en React se realiza la creacion de un E-Commerce
 -Se utiliza Reactstrap y SemanticUI para optimizar tiempo ya que este proyecto esta centrado en mostrar los conocimientos en cuanto a funcionalidades adquiridos en el curso
+-Se implementan loaders, suspense y lazy para dar mejor experiencia de usuario.
 -Se utiliza ademas:
     -Firebase: para conectarnos con FireStore

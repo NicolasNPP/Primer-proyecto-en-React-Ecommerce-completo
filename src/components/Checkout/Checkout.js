@@ -3,8 +3,6 @@ import { useCartContext } from '../../contexts/CartContext';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { db } from '../../firebase';
 
-
-
 const Checkout = () => {
     const { cantitemdos, cart, setCart } = useCartContext();
     let hoy = new Date();
@@ -20,7 +18,7 @@ const Checkout = () => {
     };
 
     const [values, setValues] = useState(initialState);
-    const [ide, setIDe] = useState('');
+    const [ident, setIDent] = useState('');
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
@@ -47,7 +45,7 @@ const Checkout = () => {
         })
             .then(
                 docRef => {
-                    setIDe(docRef.id);
+                    setIDent(docRef.id);
 
                 }
             )
@@ -55,7 +53,7 @@ const Checkout = () => {
         setCart([]);
     }
 
-    let tff = (tot) => {
+    let validar = (tot) => {
         let y
         if (tot === 0) {
             y = false;
@@ -77,17 +75,14 @@ const Checkout = () => {
         else {
             z = true;
         }
-
         return z
-
-
     }
 
     return (
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    {tff(cantitemdos) ? <div>
+                    {validar(cantitemdos) ? <div>
 
                         <Form onSubmit={handleOnSumbit}>
                             <FormGroup>
@@ -107,16 +102,11 @@ const Checkout = () => {
                         </Form>
                     </div> : <div> </div>}
 
-                    {comprobante(ide) ? <div>¡Listo! Compra realizada con exito, el numero de operacion es: <b>{ide}</b>   </div> : <div></div>}
+                    {comprobante(ident) ? <div>¡Listo! Compra realizada con exito, el numero de operacion es: <b>{ident}</b>   </div> : <div></div>}
                 </div>
             </div>
         </div>
-
-
-
     )
-
-
 }
 
 

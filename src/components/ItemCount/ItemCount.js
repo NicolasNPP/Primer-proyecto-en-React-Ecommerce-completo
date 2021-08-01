@@ -2,29 +2,14 @@ import React, { useState } from 'react';
 import './ItemCount.css';
 import { useCartContext } from '../../contexts/CartContext'
 import { Link } from "react-router-dom";
-
-
-
 const ItemCount = ({ nombre, precio, identificacion, price, name, stock }) => {
-
-
     const { addToCart, isInCart } = useCartContext();
-
     let idprod = identificacion;
-
-
-
-
-
-
 
     const [number, setNumber] = useState(1);
 
     const onAdd = () => {
         addToCart({ idprod }, number, price, name);
-
-
-
 
     }
 
@@ -44,8 +29,6 @@ const ItemCount = ({ nombre, precio, identificacion, price, name, stock }) => {
             setNumber(number - 1);
 
     }
-
-
 
     return (
         <div>

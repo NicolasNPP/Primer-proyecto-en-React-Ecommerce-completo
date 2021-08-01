@@ -10,8 +10,6 @@ export const ItemsProvider = (props) => {
     const [items, setItems] = useState(initialState);
 
 
-
-
     return (
         <ItemsContext.Provider value={[items, setItems]}>
             {/* 4 - props.childre  */}

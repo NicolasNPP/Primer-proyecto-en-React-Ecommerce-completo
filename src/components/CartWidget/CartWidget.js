@@ -8,10 +8,7 @@ import './CartWidget.css';
 const CartWidget = () => {
   const { cantitem } = useCartContext();
 
-
-
-
-  let z = (tot) => {
+  let validador = (tot) => {
     let x
     if (cantitem === 0) {
       x = false;
@@ -21,14 +18,11 @@ const CartWidget = () => {
     }
 
     return x
-
-
   }
-
 
   return (
     <div>
-      {z(cantitem) ? <Link className="color" to="/cart"><img className="cart" src={cartimage} /> {cantitem} </Link> : <Link to="/cart"><img className="cart" src={cartimage} /></Link>}
+      {validador(cantitem) ? <Link className="color" to="/cart"><img className="cart" src={cartimage} /> {cantitem} </Link> : <Link to="/cart"><img className="cart" src={cartimage} /></Link>}
     </div>
   )
 

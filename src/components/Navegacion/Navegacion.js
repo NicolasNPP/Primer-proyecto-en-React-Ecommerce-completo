@@ -35,8 +35,6 @@ const Navegacion = ({ brandname, categoriauno, categoriados, categoriatres, cate
             <Nav.Link><Link className="colores" to={`/category/${linktres}`}>{categoriatres}</Link></Nav.Link>
             <Nav.Link><Link className="colores" to={`/category/${linkcuatro}`}>{categoriacuatro}</Link></Nav.Link>
 
-
-
           </NavDropdown>
 
           <Nav.Link><Link className="colores" to="/contact">Contacto</Link></Nav.Link>

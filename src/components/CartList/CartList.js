@@ -1,18 +1,9 @@
-import React, { useState, useContext } from 'react';
 import { useCartContext } from '../../contexts/CartContext';
 import './Cartlist.css';
-
-
-
 const CartList = ({ name, price, quant, id }) => {
-    const { cart, borrarElemento } = useCartContext();
-
-
-
+    const { borrarElemento } = useCartContext();
 
     return (
-
-
 
         <tbody id={id}>
             <tr>

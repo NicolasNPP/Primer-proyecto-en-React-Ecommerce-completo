@@ -11,8 +11,6 @@ const CategoryDetail = ({ match }) => {
 
   useEffect(() => {
 
-
-
     const docc = [];
     db.collection("products").where("categorie", "==", CatID)
       .get()
@@ -28,11 +26,6 @@ const CategoryDetail = ({ match }) => {
         });
         setIte(docc);
       })
-
-
-
-
-
 
   }, [CatID]);
 

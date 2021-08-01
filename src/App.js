@@ -12,8 +12,6 @@ import { CartProvider } from './contexts/CartContext'
 import 'semantic-ui-css/semantic.min.css'
 
 
-
-
 function App() {
 
   return (

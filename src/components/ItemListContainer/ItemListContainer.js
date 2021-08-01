@@ -4,11 +4,7 @@ import ItemList from '../ItemList/ItemList';
 import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
 import { db } from '../../firebase';
 
-
-
-
 const ItemListContainer = () => {
-
 
   const [items, setItems] = useContext(ItemsContext);
 
@@ -23,7 +19,6 @@ const ItemListContainer = () => {
 
       })
       setItems(docs);
-
 
     }
 
