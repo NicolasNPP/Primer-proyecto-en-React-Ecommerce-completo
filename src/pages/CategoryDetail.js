@@ -40,9 +40,17 @@ const CategoryDetail = ({ match }) => {
 
       <div className="row">
         {ite.map(function (num) {
-          return <div key={num.id}><ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} /></div>
+          return <div key={num.id} className="col-md-3">
 
-        })}
+            <ItemSemantic name={num.name} price={num.price} description={num.description} id={num.id} img={num.photo} />
+
+          </div>
+
+        })
+
+        }
+
+
       </div>
     </div >
   );

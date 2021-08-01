@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useCartContext } from '../../contexts/CartContext';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { db } from '../../firebase';
+import { Link } from "react-router-dom";
 
 
 
@@ -48,18 +49,44 @@ const Checkout = () => {
             .then(
                 docRef => {
                     setIDe(docRef.id);
-                    alert(`Compra realizada, numero de operacion: ${ide}`)
+
                 }
             )
             .catch(e => console.log('error', e));
         setCart([]);
     }
 
+    let tff = (tot) => {
+        let y
+        if (tot === 0) {
+            y = false;
+        }
+        else {
+            y = true;
+        }
 
+        return y
+
+
+    }
+
+    let comprobante = (texto) => {
+        let z
+        if (texto === '') {
+            z = false;
+        }
+        else {
+            z = true;
+        }
+
+        return z
+
+
+    }
 
     return (
         <div>
-            <div>
+            {tff(cantitemdos) ? <div>
 
                 <Form onSubmit={handleOnSumbit}>
                     <FormGroup>
@@ -74,10 +101,12 @@ const Checkout = () => {
                         <Label for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="exampleEmail" placeholder="Ingresa tu correo" onChange={handleOnChange} value={values.email} />
                     </FormGroup>
-                    <b>Total a pagar: {cantitemdos} y el id es {ide} </b> <p></p>
+                    <b>Total a pagar: {cantitemdos} </b> <p></p>
                     <Button>Confirmar compra</Button>
                 </Form>
-            </div>
+            </div> : <div> </div>}
+
+            {comprobante(ide) ? <div>Compra realizada con exito, el numero de operacion es: <b>{ide}</b>   </div> : <div></div>}
         </div>
 
 
