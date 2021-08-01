@@ -1,16 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import './ItemCount.css';
 import { useCartContext } from '../../contexts/CartContext'
-import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
 import { Link } from "react-router-dom";
 
 
 
 const ItemCount = ({ nombre, precio, identificacion, price, name, stock }) => {
 
-    const [items, setItems] = useContext(ItemsContext);
 
-    const { cart, addToCart, isInCart } = useCartContext();
+    const { addToCart, isInCart } = useCartContext();
 
     let idprod = identificacion;
 
@@ -47,17 +45,7 @@ const ItemCount = ({ nombre, precio, identificacion, price, name, stock }) => {
 
     }
 
-    const hannddleAddCart = () => {
-        if (number <= stock && number > 0) {
-            alert(`Agregaste ${number} productos al carrito`)
-        }
-        else if (number >= stock) {
-            alert(`Solo puedes agregar hasta ${stock} productos por falta de stock`)
-        }
-        else
-            alert(`Debes agregar al menos un producto a tu carrito`)
 
-    }
 
     return (
         <div>

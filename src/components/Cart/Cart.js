@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Cart.css';
 import { useCartContext } from '../../contexts/CartContext';
-import { ItemsContext } from '../../contexts/ItemsContext/ItemsContext';
 import CartList from '../CartList/CartList';
 import { Table } from 'reactstrap';
 import { Link } from "react-router-dom";

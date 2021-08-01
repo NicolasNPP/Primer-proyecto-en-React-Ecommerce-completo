@@ -5,7 +5,6 @@ import Services from './pages/Services';
 import ItemDetail from './pages/ItemDetail';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
-import CartList from './components/CartList/CartList';
 import CategoryDetail from './pages/CategoryDetail';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { ItemsProvider } from './contexts/ItemsContext/ItemsContext';
@@ -32,6 +31,7 @@ function App() {
                 <Route path="/cart" component={Cart} />
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/detail/:name/:id" component={ItemDetail} />
+
 
               </Switch>
             </div>

@@ -1,3 +1,4 @@
--Para el proyecto utilice la API de breaking bad, ya que me parecio comoda y vimos como utilizarla durante el curso.
--El proyecto tiene un catalogo en la pagina principal, con un componente Item que muestra la informacion obtenida de la API de breaking bad gracias al metodo map(). 
--Como la API no muestra precios ni descripcion, genere un precio ficticio utiizando el ID de cada personaje y genere una descripcion utilizando diferentes atributos de cada personaje. Entendi bien como mostrar la información de precio o descripcion, pero como la api no lo ofrecia, lo hice de esta manera para mostrar contenido.
+-Para este primer proyecto en React se realiza la creacion de un E-Commerce
+-Se utiliza Reactstrap y SemanticUI para optimizar tiempo ya que este proyecto esta centrado en mostrar los conocimientos en cuanto a funcionalidades adquiridos en el curso
+-Se utiliza ademas:
+    -Firebase: para conectarnos con FireStore

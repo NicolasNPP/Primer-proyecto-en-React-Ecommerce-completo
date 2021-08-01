@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect, Suspense, lazy } from 'react';
-import { ItemsContext } from '../contexts/ItemsContext/ItemsContext';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import './ItemDetail.css';
 import { db } from '../firebase';
 import Loading from '../components/Loading/Loading';
@@ -7,7 +6,6 @@ const ItemSemantic = lazy(() => import('../components/ItemSemantic/ItemSemantic'
 
 const ItemDetail = ({ match }) => {
     let itemID = match.params.id;
-    const [items, setItems] = useContext(ItemsContext);
     const [item, setItem] = useState([]);
 
 
