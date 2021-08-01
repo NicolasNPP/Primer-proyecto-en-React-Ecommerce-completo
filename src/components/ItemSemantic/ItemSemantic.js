@@ -7,7 +7,7 @@ import './ItemSemantic.css';
 
 const ItemSemantic = ({ name, price, description, category, img, id, stock }) => (
   <div className="tarjeta"> <Card>
-    <Link to={`/detail/${id}`}> <Image src={img} wrapped ui={false} /></Link>
+    <Link to={`/detail/${name}/${id}`}> <Image src={img} wrapped ui={false} /></Link>
     <Card.Content>
       <Card.Header>{name}</Card.Header>
       <Card.Meta>
